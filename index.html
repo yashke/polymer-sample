@@ -1,0 +1,28 @@
+<!doctype html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Polymer example</title>
+    <script src="/polymer-all/polymer/polymer.js"></script>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="import" href="/sample-form.html"/>
+  </head>
+  <body>
+    <sample-form input1="kaka"></sample-form>
+
+    <script type="text/javascript">
+    var form = document.querySelector("sample-form");
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      console.log(form.input1);
+      console.log(form.input2);
+      console.log(form.input3);
+    });
+    form.linkClick = function() {
+      alert("DADADA");
+    };
+    </script>
+  </body>
+</html>

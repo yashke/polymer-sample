@@ -1,0 +1,38 @@
+<element name="sample-form" attributes="input1 input2">
+  <template>
+    <form id="forma">
+      <p>
+        <label>Labelka</label>
+        <input type="text" value="{{input1}}">
+      </p>
+      <p>
+        <label>Druga</label>
+        <input type="text" value="{{input2}}">
+      </p>
+      <p>
+        <label>Trzecia</label>
+        <input type="text" value="{{input3}}">
+      </p>
+
+      <p><a href="#" id="link">link</a></p>
+
+      <input type="submit" value="submit">
+    </form>
+  </template>
+  <script type="text/javascript">
+    Polymer.register(this, {
+      input1: "aaaa",
+      input2: "bbb",
+      input3: "ccc",
+      linkClick: function() {},
+      ready: function() {
+        var self = this;
+        var link = this.$.link;
+        link.addEventListener("click", function(e) {
+          e.preventDefault()
+          self.linkClick();
+       });
+      }
+    });
+  </script>
+</element>
